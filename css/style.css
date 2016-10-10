@@ -1,0 +1,421 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+* {
+  font-family: 'Oswald', sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* Logo */
+.logo {
+    display: block;
+    width: 200px;
+    height: 55px;
+    background: url(../images/logo.png);
+    background-size: auto 55px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-repeat: no-repeat;
+
+}
+
+.navigation {
+  display: flex;
+  padding-left: 1.125rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 70px;
+  margin-top: 30px;
+}
+
+
+
+.nav-links {
+  margin-left: auto;
+}
+
+.nav-links>ul {
+  display: flex;
+}
+
+.nav-links ul li {
+  list-style: none;
+  position: relative;
+}
+
+.nav-links>ul>li>a {
+  display: inline;
+  text-decoration: none;
+  color: #231F20;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  line-height: 70px;
+
+}
+
+/*.nav-list ul li a {
+  text-decoration: none;
+  color: #231F20;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+
+}*/
+
+.nav-links ul li a:hover {
+  background-color: #231F20;
+  color: #fff;
+}
+.nav-dropdown {
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  /*margin-top: -0.5em;*/
+}
+
+.nav-list span {
+  padding-left: 4px;
+}
+
+/* ----------Main Content-----------*/
+.main-content {
+  display: block;
+  height: 560px;
+  width: 100%;
+
+  background: url("../images/background.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;;
+  margin-right: auto;
+  margin-left: auto;
+}
+  /*display: block;
+  width: 1100px;
+  height: auto;
+  background: url("../images/background.jpg");
+  background-size: auto 500px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-repeat: no-repeat;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.image-position {
+  width: 100%;
+} */
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: white;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 1064px) {
+
+  .nav-mobile {
+    display: block;
+  }
+
+  .nav-links ul {
+      display: none;
+
+  }
+
+  #nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 2px;
+  height: 5px;
+  width: 35px;
+  background: black;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+}
+
+@media screen and (min-width: 1065px) {
+
+}
+
+@media screen and (min-width:530px) and (max-width:650px) {
+ .main-content {
+   margin-top: -50px;
+   margin-bottom: -50px;
+ }
+}
+
+@media screen and (max-width:529px) {
+ .main-content {
+   margin-top: -100px;
+   margin-bottom: -100px;
+ }
+
+ .mid-section h1 {
+   font-size: 1em;
+ }
+
+ .three-columns img {
+  width: 100%;
+
+ }
+}
+
+
+
+.small-zoom {
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s
+
+}
+.small-zoom:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* <<<------------Mid Section (After Burger Image) ---------->>>> */
+.mid-section {
+  text-align: center;
+  margin-bottom: 50px;
+
+}
+
+.mid-section h1 {
+  font-size: 2.5em;
+}
+
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+
+}
+
+.three-columns {
+  padding: 10px;
+  width: 32.2666666667%;
+  text-align: center;
+}
+
+.small-content {
+  max-width: 900px;
+  padding: 30px 10px;
+  margin: 80px auto;
+  border-style: solid;
+  border-width: 2px 0px 2px 0px;
+  border-color: #000000;
+
+}
+
+.two-third {
+
+  width: 66.6666667%;
+}
+
+.set-position {
+  float: right;
+}
+.two-third p {
+  float: left;
+  font-size: 10px;
+  text-align: left;
+  margin-top: 2em;
+  margin-bottom: 1.6em;
+}
+
+.one-third {
+  width: 33.33333333%
+}
+
+
+.diagonal {
+    height: 100px;
+    background: linear-gradient(to right bottom, transparent 50%, #231F20 50%);
+}
+
+.upper-row {
+  display: flex;
+}
+
+.bottom-row {
+  display: flex;
+}
+
+@media screen and (max-width:800px) {
+ .small-content {
+   display: block;
+ }
+ .upper-row {
+   display: block;
+ }
+  .bottom-row {
+    display: block;
+  }
+
+  .two-third img {
+    width: 100%;
+  }
+
+  .two-third {
+    width: 80%;
+
+  }
+
+}
+
+.container {
+  background-color: #231F20;
+  color: white;
+  padding: 80px 0;
+}
+
+.small-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.container h1 {
+  font-size: 4em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+.menu{
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+
+}
+.menu-item {
+  width: 75%;
+  font-size: 2em;
+  text-align: left;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.menu-description {
+  font-size: 0.5em;
+  text-align: center;
+
+}
+
+.menu-price {
+  width: 25%;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.menu-row td {
+border-bottom: 1px solid #fff;
+padding-top: 15px;
+padding-bottom: 15px;
+}
+
+.diagonal1 {
+    height: 100px;
+    background: linear-gradient(to left bottom,  #231F20 50%, transparent 50%);
+}
+
+.small-container2 {
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.container2 h1 {
+  font-size: 4em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+.store-row {
+  display: flex;
+}
+
+.store-description {
+  width: 33.3333333%;
+  text-align: left;
+  padding: 10px;
+}
+
+.store-description img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.store-description:hover {
+  background-color: rgb(226, 221, 221);
+}
+
+@media screen and (max-width: 640px) {
+  .store-description {
+    width: 100%;
+  }
+
+}
